@@ -291,6 +291,7 @@ td {
 
 #filterBox {
     float: left;
+    width: 60%;
 }
 
 /*------ CHART SIZING -----*/
