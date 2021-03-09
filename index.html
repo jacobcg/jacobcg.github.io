@@ -1,1 +1,122 @@
-"Hello World" 
+<!DOCTYPE html>
+<html>
+<head>
+    <!--test-->
+   <meta charset="utf-8"/>  
+    <title>Assignment 1</title>  
+    <script src="loadCompanyList.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
+    <link rel="stylesheet" href="styles.css"> 
+    <script src="echarts-master/dist/echarts.min.js"></script>    
+</head>
+
+
+
+<body>
+    <!--Header-->
+    <header id="header">
+        <h1 class="tooltip">COMP 3512</h1>
+        <h2 id='credits'>Credits</h2>
+        <span id='tooltiptext'></span>
+        <span id='css-used'></span>
+    </header>
+    
+    <div class="grid-container">
+        <!--LIST OF COMPANIES-->
+        <div id="list">
+            <h2>List of Companies</h2>
+            <div id='filter'>
+                <legend>Filter:</legend>
+                <div>
+                    <input id="filterBox" type='text' placeholder='Type to refine by symbol'>
+                    <button id='clearButton' class="button">Clear</button>
+                </div>
+            </div>
+            
+            <div>
+                
+            </div>
+            <div class='loader hide' id='companyLoader'></div>
+            <ul id="companyList"></ul>
+            
+
+        </div>
+
+        <!--COMPANY INFORMATION-->
+        <div id="info">
+            <h2>Company Information</h2>
+            <div id="infoInternal">
+                <div id="textInfo"></div>
+            </div>
+        </div>
+        
+        <!--STOCK DATA-->
+        <div id="stock">
+            <h2>Stock Data</h2><button class="button viewButton">View Charts</button>
+            <div id="stockData">
+                <table id="stockTable">
+                    <tr id="tableHeader">
+                    </tr>
+                </table>
+                <h2 id="stockMissingMessage" class="hide">No stock data found</h2>
+                <div class='loader hide' id='stockLoader'></div>
+            </div>
+        </div>
+
+        <!--MAP-->
+        <div id="map"></div>
+
+        <!--STOCK CALCULATIONS-->
+        <div id="calculations">
+            <table>
+                <tr id="averageCalc"></tr>
+                <tr id="minCalc"></tr>
+                <tr id="maxCalc"></tr>
+            </table>
+        </div>
+    
+    </div>
+    
+
+    <div class="grid-container-two hide">
+        
+        
+        <div id="charts" class='hide'>
+            <h1>Charts:</h1>
+            <div class='chart' id="barChart"></div>
+            <div class='chart' id="candleChart"></div>
+            <div class='chart' id="lineChart"></div>
+        </div>
+        
+        
+        
+        <div id="chartInfo" class='hide'>
+            <h2>Company Information</h2>
+            <button id="speak">Speak</button>
+            <div></div>
+            <button class="button viewButton">Close</button>
+        </div>
+        
+        
+        <div id="finance" class='hide'>
+            <h2>Financial breakdown</h2>
+            
+            <table id="financeTable">
+                <tr>
+                    <th id="financeYearHeader">Year</th>
+                    <th>2017</th>
+                    <th>2018</th>
+                    <th>2019</th>
+                </tr>
+                <tr class="financeRows"><td class="financeDescriptor">Assets</td></tr>
+                <tr class="financeRows"><td class="financeDescriptor">Earnings</td></tr>
+                <tr class="financeRows"><td class="financeDescriptor">Liabilities</td></tr>
+                <tr class="financeRows"><td class="financeDescriptor">Revenue</td></tr>
+            </table>
+        </div>
+    </div>
+
+</body>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9kMLcamhEVkimas5Qp7PQyl-ZEYpIPHQ"></script>
+</html>
+
